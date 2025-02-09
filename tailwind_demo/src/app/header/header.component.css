@@ -1,0 +1,52 @@
+
+.hero-section {
+    background-color: #014421; 
+    color: #ffffff; 
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.navbar-brand {
+    font-family: 'Cinzel', serif;
+    color: #011744;
+    font-size: 24px;
+}
+
+.navbar-nav .nav-link {
+    color: #011744;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #014421;
+}
+
+.cta-btn {
+    background-color: #ffffff;
+    color: #014421;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.cta-btn:hover {
+    background-color: #fff;
+}
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    gap: 40px; /* Add spacing between links */
+}

@@ -1,0 +1,28 @@
+footer {
+    background-color: #014421; /* Dark background color */
+    color: #ffffff; /* White text color */
+  }
+  
+  footer a {
+    color: #ffffff; /* White links */
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: #adb5bd; /* Light grey color on hover */
+    text-decoration: underline;
+  }
+  
+  footer ul {
+    padding-left: 0; /* Remove default padding from ul */
+  }
+  
+  footer li {
+    list-style: none; /* Remove default list style */
+    margin-bottom: 0.5rem; /* Space out list items */
+  }
+  
+  footer h5 {
+    margin-bottom: 1rem; /* Space out headings */
+  }
+  

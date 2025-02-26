@@ -1,0 +1,65 @@
+<div class="form-container" [ngClass]="{'dark-mode': darkMode}">
+    <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+      <!-- User Name -->
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="userName" placeholder="Enter username" />
+        <mat-error *ngIf="formdata.controls['userName'].invalid && formdata.controls['userName'].touched">Username is required</mat-error>
+      </mat-form-field>
+  
+      <!-- Email -->
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Enter email" />
+        <mat-error *ngIf="formdata.controls['email'].invalid && formdata.controls['email'].touched">
+          Invalid email address
+        </mat-error>
+      </mat-form-field>
+  
+      <!-- Password -->
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" placeholder="Enter password" />
+        <mat-error *ngIf="formdata.controls['password'].invalid && formdata.controls['password'].touched">
+          Password must be alphanumeric, start with a letter, and be at least 8 characters long
+        </mat-error>
+      </mat-form-field>
+  
+      <!-- Gender -->
+      <mat-radio-group formControlName="gender">
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+        <mat-radio-button value="other">Other</mat-radio-button>
+      </mat-radio-group>
+  
+      <!-- Date of Birth -->
+      <mat-form-field appearance="fill">
+        <mat-label>Birth Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="birthDate" placeholder="Choose birth date" />
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="formdata.controls['birthDate'].invalid && formdata.controls['birthDate'].touched">
+          You must be born in 2006 or earlier
+        </mat-error>
+      </mat-form-field>
+  
+      <!-- Angular Skill Level -->
+      <div class="slider-group">
+        <label class="slider-label">Angular Skill Level: {{ formdata.get('angularSkill Level')?.value }}</label> <mat-slider [min]="minSkillLevel" [max]="maxSkillLevel" [step]="1" [discrete] ="true">
+        <input matSliderThumb formControlName="angularSkillLevel">
+        </mat-slider>
+        </div>
+  
+      <!-- Address -->
+      <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+        <textarea matInput formControlName="address" placeholder="Enter your address"></textarea>
+      </mat-form-field>
+  
+      <!-- Submit Button -->
+      <button mat-raised-button type="submit" [disabled]="formdata.invalid">Submit</button>
+    </form>
+  
+    <!-- Light/Dark Mode Toggle -->
+    <mat-slide-toggle (change)="toggleMode()">Dark Mode</mat-slide-toggle>
+  </div>
+  

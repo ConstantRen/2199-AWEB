@@ -1,0 +1,33 @@
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[[plugins]]
+origin = "default"
+package = "@netlify/angular-runtime"
+
+[plugins.inputs]
+
+[build]
+publish = "/Users/sjh-706/2199_RMC/angular_mat/dist/angular_mat/browser"
+publishOrigin = "ui"
+commandOrigin = "ui"
+base = "/Users/sjh-706/2199_RMC/angular_mat"
+command = "npm run build"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
